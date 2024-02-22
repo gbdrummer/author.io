@@ -1,0 +1,7 @@
+.modal {
+  max-width: 61.8vw;
+  background: white;
+  border-radius: var(--borderRadius);
+  box-shadow: var(--boxShadow);
+  overflow: hidden;
+}

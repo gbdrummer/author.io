@@ -1,0 +1,13 @@
+{
+  "name": "<your project name>-src",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Source code for your project",
+  "main": "index.js",
+  "scripts": {
+    "setup": "rm -rf ./node_modules && npm i && npm link authorui"
+  },
+  "author": "<Your Name>",
+  "license": "<LICENSE>"
+}

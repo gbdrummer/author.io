@@ -1,0 +1,28 @@
+a {
+  color: var(--anchor_color);
+  text-decoration: var(--anchor_textDecoration);
+
+  & .icon {
+    margin-inline-end: var(--mibi);
+    stroke: var(--anchor_icon_color);
+  }
+
+  &:hover,
+  &.hover {
+    --anchor_textDecoration: var(--anchor_hover_textDecoration);
+  }
+
+  &:active {
+    --anchor_color: var(--anchor_active_color)
+  }
+
+  &[disabled] {
+    --anchor_color: var(--anchor_disabled_color);
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

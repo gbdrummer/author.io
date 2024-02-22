@@ -1,0 +1,11 @@
+{
+  "name": "authorui-test-src",
+  "version": "0.0.1-alpha.1",
+  "description": "Source code for AuthorUI Test Harness use cases",
+  "main": "index.js",
+  "scripts": {
+    "setup": "rm -rf ./node_modules && npm i && npm link authorui"
+  },
+  "author": "Graham Butler",
+  "license": "UNLICENSED"
+}

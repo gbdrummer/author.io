@@ -1,0 +1,17 @@
+form {
+	display: grid;
+	gap: var(--mibb);
+
+	& fieldset {
+		& legend {
+			transform: translateY(10px);
+			margin-block-end: var(--pibb);
+			font-size: var(--fontSize);
+			font-weight: 500;
+		}
+
+		&:not(:last-of-type) {
+			border-block-end: var(--pane_border);
+		}
+	}
+}

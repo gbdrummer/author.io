@@ -1,0 +1,22 @@
+{
+  "name": "<your project name>-dev",
+  "private": true,
+  "type": "module",
+  "version": "0.0.1-alpha",
+  "description": "Description of your project's development environment goes here",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd build && node index.js",
+    "locally:prod": "npm run build && node server.js ./dist --port=3004 --compress",
+    "locally": "node server.js ./src --port=3003",
+    "setup": "rm -rf ./node_modules && npm i && cd build && npm run setup && cd ../src && npm run setup && cd ../tests && npm run setup",
+    "test": "cd test && node index.js"
+  },
+  "author": "<Your Name>",
+  "license": "<LICENSE>",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.18.2",
+    "express-history-api-fallback": "^2.2.1"
+  }
+}

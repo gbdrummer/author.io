@@ -1,0 +1,36 @@
+:root {
+  --font_default: 
+    -apple-system,
+    BlinkMacSystemFont,
+    'Avenir Next',
+    Avenir,
+    Helvetica,
+    Arial,
+    sans-serif
+  ;
+
+  --font_monospace: 
+    ui-monospace, 
+    Menlo,
+    Monaco, 
+    "Cascadia Mono",
+    "Segoe UI Mono", 
+    "Roboto Mono", 
+    "Oxygen Mono", 
+    "Ubuntu Monospace", 
+    "Source Code Pro",
+    "Fira Mono", 
+    "Droid Sans Mono", 
+    "Courier New", 
+    monospace
+  ;
+
+  font-family: var(--font_default, initial);
+  font-size: var(--fontSize);
+  line-height: var(--lineHeight);
+  color: var(--text_color, initial);  
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}

@@ -1,0 +1,8 @@
+{
+  "src": "../src",
+  "dist": "../dist",
+
+  "entries": [
+    "index.js"
+  ]
+}

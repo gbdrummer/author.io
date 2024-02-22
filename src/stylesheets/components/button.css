@@ -1,0 +1,38 @@
+button {
+  display: inline-grid;
+  justify-content: center;
+  padding: var(--pibb) calc(1.618 * var(--pibi));
+  border-radius: .236em;
+  background: var(--button_bgColor);
+  font-weight: bold;
+  color: var(--button_text_color);
+  cursor: pointer;
+
+  &:hover {
+    --button_bgColor: var(--button_hover_bgColor);
+  }
+
+  &:active {
+    --button_bgColor: var(--button_active_bgColor);
+  }
+
+  &.secondary {
+    
+  }
+
+  &.link {
+    padding: 0;
+    background: none;
+    color: var(--anchor_color);
+    font-weight: normal;
+
+    &:hover {
+      text-decoration: var(--anchor_hover_textDecoration);
+    }
+  }
+
+  &[disabled] {
+    --button_bgColor: var(--button_disabled_bgColor);
+    pointer-events: none;
+  }
+}

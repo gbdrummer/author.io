@@ -1,0 +1,19 @@
+@import url("reset.css") layer(reset);
+@import url("layout.css") layer(layout);
+@import url("typography.css") layer(typography);
+@import url("modifiers.css") layer(modifiers);
+@import url("theme.css") layer(theme);
+
+@import url("components/anchor.css") layer(components);
+@import url("components/button.css") layer(components);
+@import url("components/form.css") layer(components);
+@import url("components/form-controls.css") layer(components);
+@import url("components/overlay.css") layer(components);
+
+@import url("../views/login/styles.css") layer(views);
+@import url("../views/signup/styles.css") layer(views);
+
+:root {
+  color-scheme: only light;
+  background-color: var(--bgColor_root, initial);
+}

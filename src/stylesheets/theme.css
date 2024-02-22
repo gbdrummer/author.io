@@ -1,0 +1,83 @@
+:root {
+  /* COLORS ********************************/
+
+  --blue_l1:     #5a69eb;
+  --blue:        #4B5ADD;
+  --blue_d1:     #414CB9;
+
+  --violet:      #BA4BDD;
+  --red:         #DD4B83;
+  --orange:      #DD904B;
+  --yellowGreen: #ADDD4B;
+  --green:       #4BDD66;
+  --teal:        #4BD7DD;
+
+  --grey_0:      #D6D6D6;
+  --grey_2:      #545454;
+  --grey_1:      #888888;
+
+  --disabled_text_color: var(--grey_1);
+  --disabled_grey:       var(--grey_0);
+
+
+  /* ROOT ********************************/
+
+  --bgColor_root: var(--white);
+  --text_color:   var(--grey_2);
+
+
+  /* ANCHOR ********************************/
+
+  --anchor_color:                var(--blue);
+  --anchor_hover_textDecoration: underline;
+  --anchor_active_color:         var(--blue_d1);
+  --anchor_disabled_color:       var(--disabled_text_color);
+  --anchor_icon_color:           currentColor;
+
+
+  /* BUTTON ********************************/
+
+  --button_bgColor:          var(--blue);
+  --button_text_color:       white;
+  --button_hover_bgColor:    radial-gradient(var(--blue_l1), var(--blue));
+  --button_active_bgColor:   radial-gradient(var(--blue_d1), var(--blue));
+  --button_disabled_bgColor: var(--disabled_grey);
+
+
+  /* FORMS ******************************************************************/
+
+  --input_bgColor:                    white;
+	--input_text_color:                 var(--text_color);
+  --input_placeholder_color:          var(--grey_1);
+  --input_icon_color:                 var(--input_placeholder_color);
+  --input_boxShadow_color:            var(--grey_1);
+  --input_boxShadow_width:            1px;
+  --input_boxShadow:                  inset 0 0 0 var(--input_boxShadow_width) var(--input_boxShadow_color);
+  --input_borderRadius:               var(--borderRadius);
+  --input_focus_bgColor:              var(--input_bgColor);
+  --input_focus_boxShadow_color:      var(--blue);
+  --input_focus_boxShadow:            inset 0 0 0 var(--input_boxShadow_width) var(--input_focus_boxShadow_color), 0 0 0 var(--input_boxShadow_width) var(--input_focus_boxShadow_color);
+  --input_focus_icon_color:           var(--input_focus_boxShadow_color);
+	--input_invalid_text_color:         var(--red);
+  --input_invalid_boxShadow_color:    var(--input_invalid_text_color);
+  --input_invalid_boxShadow:          inset 0 0 0 var(--input_boxShadow_width) var(--input_invalid_boxShadow_color);
+  --input_invalid_icon_color:         var(--input_invalid_boxShadow_color);
+
+  --textarea_bgColor:                 var(--input_bgColor);
+  --textarea_boxShadow_color:         var(--input_boxShadow_color);
+  --textarea_boxShadow_width:         var(--input_boxShadow_width);
+  --textarea_boxShadow:               inset 0 0 0 var(--textarea_boxShadow_width) var(--textarea_boxShadow_color);
+  --textarea_borderRadius:            var(--borderRadius);
+  --textarea_focus_bgColor:           var(--input_bgColor);
+  --textarea_focus_boxShadow_color:   var(--input_focus_boxShadow_color);
+  --textarea_focus_boxShadow:         inset 0 0 0 var(--textarea_boxShadow_width) var(--textarea_focus_boxShadow_color);
+  --textarea_focus_icon_color:        var(--input_focus_boxShadow_color);
+  --textarea_invalid_boxShadow_color: var(--input_invalid_boxShadow_color);
+  --textarea_invalid_boxShadow:       inset 0 0 0 var(--textarea_boxShadow_width) var(--textarea_invalid_boxShadow_color);
+  --textarea_fontFamily:              var(--font_default);
+  --textarea_text_color:              var(--input_text_color);
+  --textarea_placeholder_color:       var(--input_placeholder_color);
+  --textarea_icon_color:              var(--input_icon_color);
+
+  --select_focus_boxShadow:           inset 0 0 0 var(--input_boxShadow_width) var(--blue);
+}

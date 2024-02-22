@@ -1,0 +1,79 @@
+:root {
+  --layout_width_min: 320px;
+  --layout_width_max: 1280px;
+  --layout_height_min: 400px;
+
+  --fontSize: 16px;
+  --fontSize_small: .7861513777574233rem;
+  --fontSize_large: 1.272019649514069rem;
+  --fontSize_larger: 1.618033988749895rem;
+  --fontSize_largest: 2.0581710272714924rem;
+  
+  --lineHeight: 1.6462137356044635;
+  --lineHeight_min: 1.381966011250105;
+  --lineHeight_small: 1.7180943089682263;
+  --lineHeight_large: 1.5897047238205477;
+  --lineHeight_larger: 1.545280086350912;
+  --lineHeight_largest: 1.5103555963977837;
+
+  --lineHeight_h1: 1.5103555963977837;
+  --lineHeight_h2: 1.545280086350912;
+  --lineHeight_h3: var(--lineHeight);
+  --lineHeight_legend: 1.5897047238205477;
+
+  --pbi: 2.36%;
+  --pbb: 3.82%;
+  --pibi: .9971574549230421em;
+  --pibb: .6360098247570345em;
+
+  --pb: var(--pbb) var(--pbi);
+  --pib: var(--pibb) var(--pibi);
+
+  --mbi: 3.82em;
+  --mbb: 2.36em;
+  --mibi: .49847794534644424em;
+  --mibb: 1em;
+
+  --mb: var(--mbb) var(--mbi);
+  --mib: var(--mibb) var(--mibi);
+
+  --borderRadius: .236em;
+
+  --icon_width:  calc(var(--lineHeight_min) * 1em);
+  --icon_height: var(--icon_width);
+}
+
+html {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  min-width: var(--layout_width_min);
+  overflow: auto hidden;
+}
+
+main {
+  background: var(--white);
+}
+
+h1 {
+  font-size: 2.0581710272714924rem;
+  line-height: var(--lineHeight_h1);
+}
+
+h2 {
+  font-size: 1.618033988749895rem;
+  line-height: var(--lineHeight_h2);
+}
+
+h3, h4, h5, h6 {
+  font-size: 1rem;
+  line-height: var(--lineHeight_h3);
+}
+
+legend {
+  font-size: 1.272019649514069rem;
+  line-height: var(--lineHeight_legend);
+}
