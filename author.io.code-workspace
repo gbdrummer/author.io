@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "../user-portal-ui"
+    },
+    {
+      "path": "../brand"
+    },
+    {
+      "path": "../author.ioOLD.io"
+    },
+    {
+      "path": "../authorui/repos/authorui"
+    }
+  ]
+}

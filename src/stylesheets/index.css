@@ -10,8 +10,8 @@
 @import url("components/form-controls.css") layer(components);
 @import url("components/overlay.css") layer(components);
 
-@import url("../views/login/styles.css") layer(views);
-@import url("../views/signup/styles.css") layer(views);
+@import url("header.css") layer(layout);
+@import url("sections.css") layer(layout);
 
 :root {
   color-scheme: only light;

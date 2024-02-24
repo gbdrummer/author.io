@@ -1,0 +1,26 @@
+main header {
+  display: grid;
+  grid-template-areas: ". logo nav .";
+  grid-template-columns: 0 170px auto 0;
+  gap: var(--column_gap);
+  padding: 1.382em calc((100vw - 1140px) / 2);
+
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline: 0;
+
+  background: var(--primary_color);
+  box-shadow: var(--boxShadow);
+
+  & > h1 {
+    display: none;
+  }
+
+  & > .logo {
+    grid-area: logo;
+  }
+
+  & > .nav {
+    grid-area: nav;
+  }
+}

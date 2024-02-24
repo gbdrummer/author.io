@@ -1,7 +1,9 @@
 :root {
   --layout_width_min: 320px;
-  --layout_width_max: 1280px;
+  /* --layout_width_max: 1280px; */
   --layout_height_min: 400px;
+
+  --mobile_upperBound: 768px;
 
   --fontSize: 16px;
   --fontSize_small: .7861513777574233rem;
@@ -38,6 +40,9 @@
   --mib: var(--mibb) var(--mibi);
 
   --borderRadius: .236em;
+  
+  --column_gap: 1.618em;
+  --row_gap: 1.618em;
 
   --icon_width:  calc(var(--lineHeight_min) * 1em);
   --icon_height: var(--icon_width);
@@ -51,7 +56,7 @@ html {
 
 body {
   min-width: var(--layout_width_min);
-  overflow: auto hidden;
+  overflow: hidden auto;
 }
 
 main {

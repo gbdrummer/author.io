@@ -1,5 +1,23 @@
-import { attach, html } from 'aui'
+import { attach, html, include, State } from 'aui'
 
-attach(document.body, html`
-  <p style="padding: 1em;">Hello World!</p>
+const { bind, proxy } = new State({
+  slide: 1
+})
+
+const hero = document.getElementById('hero')
+
+attach(hero.querySelector('.slides'), html`
+  ${bind('slide', id => {
+    // return html`${id}`
+
+    return html`${include(`./slides/${id}.js`)}`
+  })}
+`)
+
+setTimeout(() => {
+  proxy.slide = 2
+}, 1500)
+
+attach(hero.querySelector('nav'), html`
+  NAV
 `)
