@@ -14,6 +14,9 @@
     },
     {
       "path": "../authorui/repos/authorui"
+    },
+    {
+      "path": "../3rd party logos"
     }
   ]
 }

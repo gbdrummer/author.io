@@ -4,6 +4,7 @@ button {
   padding: var(--pibb) calc(1.618 * var(--pibi));
   border-radius: .236em;
   background: var(--button_bgColor);
+  font-family: var(--font_default, initial);
   font-weight: bold;
   color: var(--button_text_color);
   cursor: pointer;
@@ -17,17 +18,36 @@ button {
   }
 
   &.secondary {
-    
+    --button_bgColor: none;
+    --button_text_color: var(--grey_2);
+    box-shadow: inset 0 0 0 2px var(--button_text_color);
+
+    &:hover {
+      --button_text_color: var(--blue);
+    }
   }
 
   &.link {
+    --button_bgColor: none;
+    --button_text_color: var(--anchor_color);
+
     padding: 0;
-    background: none;
-    color: var(--anchor_color);
     font-weight: normal;
 
     &:hover {
       text-decoration: var(--anchor_hover_textDecoration);
+    }
+  }
+
+  &.bare {
+    --button_bgColor: none;
+    --button_text_color: var(--text_color);
+
+    padding: 0;
+    font-weight: normal;
+
+    &:hover {
+      --button_text_color: var(--anchor_color);
     }
   }
 

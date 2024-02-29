@@ -1,0 +1,126 @@
+main > section.hero {
+  display: grid;
+  padding-block: 3.82em;
+  background: var(--secondary_color);
+  background: radial-gradient(circle, var(--secondary_color) 62%, rgba(230,234,255,1) 100%);
+
+  @media screen and (max-width: 767px) {
+    grid-template-areas: ". content ."
+                         ". image .";
+
+    grid-template-columns: 0 1fr 0;
+    grid-template-rows: auto auto;
+    row-gap: var(--row_gap);
+  }
+
+  @media screen and (min-width: 768px) {
+    grid-template-areas: ". content image .";
+    grid-template-columns: 0 .618fr .382fr 0;
+    column-gap: var(--column_gap);
+    padding-block: 6.18em;
+  }
+
+  & > .content {
+    grid-area: content;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      text-align: start;
+    }
+
+    & h2,
+    & h3 {
+      & > span {
+        white-space: nowrap;
+      }
+
+      @media screen and (min-width: 768px) {
+        & > br {
+          display: none;
+        }
+      }
+    }
+
+    & h2 {
+      margin-block-end: .382em;
+
+      @media screen and (max-width: 767px) {
+        font-size: 2em;
+      }
+
+      @media screen and (max-width: 479px) {
+        font-size: 1.618em;
+      }
+
+      @media screen and (min-width: 768px) {
+        text-align: start;
+      }
+    }
+
+    & h3 {
+      margin-block-end: 1.382em;
+
+      @media screen and (max-width: 767px) {
+        font-size: 1.382em;
+      }
+
+      @media screen and (max-width: 479px) {
+        font-size: 1em;
+      }
+    }
+
+    & > .toolbar {
+      display: flex;
+      flex-direction: column;
+      gap: .382em;
+
+      @media screen and (max-width: 767px) {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.618em;
+      }
+
+      & > * {
+        display: flex;
+        gap: 1em;
+
+        & > .logos {
+          display: flex;
+          gap: .618em;
+          margin-block-end: .382em;
+  
+          & > svg {
+            width: var(--icon_width);
+            height: var(--icon_height);
+            fill: var(--grey_3) !important;
+          }
+        }
+
+        @media screen and (max-width: 767px) {
+          & > p {
+            display: none;
+          }
+        }
+
+        &.platforms > svg {
+          fill: var(--grey_3);
+        }
+      }
+    }
+
+    & > footer {
+      display: flex;
+      gap: 1em;
+      margin-block-start: var(--column_gap);
+
+      @media screen and (max-width: 767px) {
+        justify-content: center;
+      }
+    }
+  }
+
+  & > .image {
+    grid-area: image;
+    overflow: visible;
+  }
+}

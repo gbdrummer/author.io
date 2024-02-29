@@ -5,17 +5,18 @@
 
   --mobile_upperBound: 768px;
 
-  --fontSize: 16px;
-  --fontSize_small: .7861513777574233rem;
-  --fontSize_large: 1.272019649514069rem;
-  --fontSize_larger: 1.618033988749895rem;
+  --fontSize:         16px;
+  --fontSize_small:   .7861513777574233rem;
+  --fontSize_large:   1.272019649514069rem;
+  --fontSize_larger:  1.618033988749895rem;
   --fontSize_largest: 2.0581710272714924rem;
+  --fontSize_heading: 2.618em;
   
-  --lineHeight: 1.6462137356044635;
-  --lineHeight_min: 1.381966011250105;
-  --lineHeight_small: 1.7180943089682263;
-  --lineHeight_large: 1.5897047238205477;
-  --lineHeight_larger: 1.545280086350912;
+  --lineHeight:         1.6462137356044635;
+  --lineHeight_min:     1.381966011250105;
+  --lineHeight_small:   1.7180943089682263;
+  --lineHeight_large:   1.5897047238205477;
+  --lineHeight_larger:  1.545280086350912;
   --lineHeight_largest: 1.5103555963977837;
 
   --lineHeight_h1: 1.5103555963977837;
@@ -52,11 +53,11 @@ html {
   display: grid;
   height: 100vh;
   width: 100vw;
+  overflow: hidden auto;
 }
 
 body {
   min-width: var(--layout_width_min);
-  overflow: hidden auto;
 }
 
 main {

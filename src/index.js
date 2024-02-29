@@ -1,23 +1,9 @@
-import { attach, html, include, State } from 'aui'
+document.body.querySelectorAll('main > header > nav a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', evt => {
+    evt.preventDefault()
 
-const { bind, proxy } = new State({
-  slide: 1
+    document.querySelector(anchor.getAttribute('href'))?.scrollIntoView({
+      behavior: 'smooth'
+    })
+  })
 })
-
-const hero = document.getElementById('hero')
-
-attach(hero.querySelector('.slides'), html`
-  ${bind('slide', id => {
-    // return html`${id}`
-
-    return html`${include(`./slides/${id}.js`)}`
-  })}
-`)
-
-setTimeout(() => {
-  proxy.slide = 2
-}, 1500)
-
-attach(hero.querySelector('nav'), html`
-  NAV
-`)

@@ -13,17 +13,19 @@
   --teal:        #4BD7DD;
 
   --grey_0:      #D6D6D6;
-  --grey_2:      #545454;
   --grey_1:      #888888;
+  --grey_2:      #545454;
+  --grey_3:      #353F4F;
 
   --primary_color:   white;
   --secondary_color: #F0F2FB;
-  --cta_color:       var(--blue)
+  --cta_color:       var(--blue);
 
   --disabled_text_color: var(--grey_1);
   --disabled_grey:       var(--grey_0);
 
   --boxShadow: 0 2px 3px rgba(96, 96, 96, .1);
+  --boxShadow_block: 0 4px 12px 0 rgba(0, 0, 0, .08);
 
 
   /* ROOT ********************************/

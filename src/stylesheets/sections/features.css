@@ -1,0 +1,37 @@
+main > section.features {
+  display: grid;
+
+  grid-template-areas: ". header  ."
+                      ". content .";
+  
+  grid-template-columns: 0 auto 0;
+  grid-template-rows: auto 1fr;
+
+  & > header {
+    grid-area: header;
+  }
+
+  & > ul {
+    --x_gap: var(--column_gap);
+    --y_gap: var(--row_gap);
+
+    grid-area: content;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: var(--x_gap);
+    row-gap: var(--y_gap);
+
+    @media screen and (min-width: 768px) {
+      --x_gap: 3.82em;
+      --y_gap: 2.36em;
+
+      & > li {
+        flex: 0 0 calc(50% - (var(--x_gap) / 2));
+      }
+    }
+
+    @media screen and (min-width: 992px) {
+      --x_gap: 6.18em;
+    }
+  }
+}

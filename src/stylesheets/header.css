@@ -1,16 +1,20 @@
-main header {
+main > header {
   display: grid;
   grid-template-areas: ". logo nav .";
-  grid-template-columns: 0 170px auto 0;
+  grid-template-columns: 0 160px auto 0;
   gap: var(--column_gap);
-  padding: 1.382em calc((100vw - 1140px) / 2);
+  padding: .618em calc((100vw - 1200px) / 2);
 
-  position: fixed;
+  position: sticky;
   inset-block-start: 0;
   inset-inline: 0;
 
   background: var(--primary_color);
   box-shadow: var(--boxShadow);
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    padding-block: 1em;
+  }
 
   & > h1 {
     display: none;
@@ -18,9 +22,59 @@ main header {
 
   & > .logo {
     grid-area: logo;
+    align-self: center;
   }
 
-  & > .nav {
+  & > nav {
     grid-area: nav;
+
+    @media screen and (max-width: 767px) {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+    }
+
+    & > .menu {
+      display: none;
+
+      @media screen and (min-width: 768px) {
+        display: grid;
+        grid-template-areas: "primary secondary";
+
+        & a {
+          font-weight: 500;
+
+          &:hover {
+            text-decoration: none; 
+          }
+
+          &:not(:hover) {
+            color: var(--grey_3);
+          }
+        }
+  
+        & > * {
+          display: flex;
+          align-items: center;
+          justify-content: end;
+          gap: 2.36em;
+    
+          &.primary {
+            grid-area: primary;
+          }
+      
+          &.secondary {
+            grid-area: secondary;
+            gap: var(--column_gap);
+          }
+        }
+      }
+    }
+
+    & button.toggle {
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+    }
   }
 }

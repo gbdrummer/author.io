@@ -1,0 +1,72 @@
+import { attach, html, include, State } from 'aui'
+import slides from './slides.js'
+
+function transitionSlide (index) {
+  requestAnimationFrame(() => {
+    proxy.transitioning = true
+    setTimeout(() => requestAnimationFrame(() => proxy.slide = index), transitionLength)
+  })
+}
+
+const { map } = new State(slides),
+      
+      { bind, proxy, on } = new State({
+        slide: 0,
+        transitioning: false
+      }),
+      
+      hero = document.getElementById('hero'),
+      slide = hero.querySelector('.slide'),
+
+      transitionLength = 236, // NOTE: if this changes, update css as well
+      slideDuration = 6180,
+      
+      timer = setInterval(() => {
+        transitionSlide(proxy.slide === slides.length - 1 ? 0 : proxy.slide + 1)
+      }, slideDuration),
+
+      SlideView = (className, template) => html`<div>${template}</div>`({
+        attributes: {
+          class: bind('transitioning', t => [...(() => t ? ['exiting'] : [])(), className].join(' '))
+        }
+      })
+
+slide.dataset.id = slides[proxy.slide]
+
+on('change', ({ current }) => {
+  slide.dataset.id = slides[current.slide]
+})
+
+attach(slide, html`
+  ${bind('slide', index => {
+    const slide = slides[index]
+
+    return html`
+      ${SlideView('content', html`
+        ${include(`./slides/${slide}/index.js`, {
+          on: {
+            render: () => proxy.transitioning = false
+          }
+        })}
+      `)}
+      
+      ${SlideView('image', html`${include(`./slides/${slide}/image.js`)}`)}
+    `
+  })}
+`)
+
+attach(hero.querySelector('nav'), html`
+  ${map(id => html`<div></div>`({
+    attributes: {
+      class: bind('slide', slide => [...(() => slide === slides.indexOf(id) ? ['selected'] : [])(), 'marker'].join(' '))
+    },
+
+    on: {
+      click: evt => {
+        evt.target.classList.add('manually', 'selected')
+        clearInterval(timer)
+        transitionSlide(slides.indexOf(id))
+      }
+    }
+  }))}
+`)

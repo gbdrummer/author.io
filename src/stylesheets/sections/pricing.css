@@ -1,0 +1,122 @@
+main > section.pricing {
+  grid-template-areas: ". header   ."
+                       ". column-1 ."
+                       ". column-2 ."
+                       ". column-3 .";
+
+  grid-template-rows: auto repeat(3, 1fr);
+  
+  background: linear-gradient(180deg, var(--secondary_color) 0%, transparent 100%);
+
+  @media screen and (min-width: 768px) {
+    grid-template-areas: ". header   header   header   ."
+                         ". column-1 column-2 column-3 .";
+
+    grid-template-columns: 0 repeat(3, 1fr) 0;
+    grid-template-rows: auto 1fr;
+  }
+
+  & > header {
+    grid-area: header;
+  }
+
+  & > .column {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.618em;
+    padding: calc(2 * var(--pibb)) calc(2 * var(--pibi)) 0;
+
+    background: white;
+    border-radius: 1em;
+    box-shadow: var(--boxShadow_block);
+
+    & > header {
+      & > * {
+        text-align: center;
+
+        &:is(h3) {
+          font-size: var(--fontSize_larger);
+          color: var(--grey_3);
+        }
+
+        &:is(p) {
+          margin-block-start: .382em;
+          font-size: .9em;
+          color: var(--grey_1);
+        }
+      }
+    }
+
+    & > .price {
+      display: grid;
+      grid-template-areas: "price"
+                           "frequency";
+
+      grid-template-rows: auto auto;
+      justify-content: center;
+
+      text-align: center;
+
+      & > .amount {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        color: var(--grey_3);
+
+        & > sup {
+          transform: translateY(-.6em);
+          font-size: 1.618em;
+          font-weight: 600;
+  
+          &.currency {
+            transform: translateY(-.3em);
+            font-size: 2.36em;
+          }
+        }
+
+        & > span {
+          font-size: 5em;
+          font-weight: bold;
+        }
+      }
+
+      & > .frequency {
+        font-size: var(--fontSize_large);
+        color: var(--grey_1);
+      }
+    }
+
+    & > footer {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      row-gap: 1em;
+
+      & > p {
+        font-size: var(--fontSize_small);
+        text-align: center;
+      }
+    }
+
+    &.free {
+      grid-area: column-1;
+    }
+
+    &.automation {
+      grid-area: column-2;
+    }
+
+    &.tba {
+      grid-area: column-3;
+
+      & > .price {
+        flex: 1;
+        grid-template-rows: 1fr auto;
+
+        & > .amount > span {
+          font-size: var(--fontSize_largest);
+        }
+      }
+    }
+  }
+}

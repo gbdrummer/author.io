@@ -4,6 +4,6 @@
 
   "entries": [
     "index.js",
-    "./slides/*.js"
+    "./slides/**/*.js"
   ]
 }
