@@ -1,15 +1,15 @@
 {
-  "name": "<your project name>-test",
+  "name": "author.io-test",
   "private": true,
   "type": "module",
   "version": "1.0.0",
-  "description": "",
+  "description": "Test harness for author.io website",
   "main": "index.js",
   "scripts": {
     "setup": "rm -rf ./node_modules && npm i"
   },
-  "author": "<Your Name>",
-  "license": "<LICENSE>",
+  "author": "Graham Butler",
+  "license": "UNLICENSED",
   "dependencies": {
     "express": "^4.18.2",
     "express-history-api-fallback": "^2.2.1",

@@ -1,15 +1,15 @@
 {
-  "name": "<your-project-name>-build",
+  "name": "author.io-build",
   "private": true,
   "type": "module",
   "version": "0.0.1-alpha.1",
-  "description": "Build tool for your project",
+  "description": "Build tool for author.io website",
   "main": "index.js",
   "scripts": {
     "setup": "rm -rf ./node_modules && npm i"
   },
-  "author": "<Your Name>",
-  "license": "<LICENSE>",
+  "author": "Graham Butler",
+  "license": "UNLICENSED",
   "dependencies": {
     "@minify-html/node": "^0.15.0",
     "esbuild": "^0.19.10",

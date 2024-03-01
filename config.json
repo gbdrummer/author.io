@@ -3,6 +3,6 @@
   "dist": "../dist",
 
   "entries": [
-    "index.js"
+    "./runtime/index.js"
   ]
 }
