@@ -1,16 +1,19 @@
-button {
+button,
+a.button {
   display: inline-grid;
   justify-content: center;
   padding: var(--pibb) calc(1.618 * var(--pibi));
   border-radius: .236em;
   background: var(--button_bgColor);
   font-family: var(--font_default, initial);
+  line-height: var(--lineHeight);
   font-weight: bold;
   color: var(--button_text_color);
-  cursor: pointer;
+  user-select: none;
 
   &:hover {
     --button_bgColor: var(--button_hover_bgColor);
+    text-decoration: none;
   }
 
   &:active {

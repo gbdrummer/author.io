@@ -1,4 +1,4 @@
-document.body.querySelectorAll('main > header > nav a[href^="#"]').forEach(anchor => {
+document.body.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', evt => {
     evt.preventDefault()
 
@@ -6,4 +6,8 @@ document.body.querySelectorAll('main > header > nav a[href^="#"]').forEach(ancho
       behavior: 'smooth'
     })
   })
+})
+
+document.querySelectorAll('.current_year').forEach(span => {
+  span.innerHTML = new Date().getFullYear()
 })

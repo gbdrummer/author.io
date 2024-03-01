@@ -22,16 +22,60 @@ main > section.features {
     row-gap: var(--y_gap);
 
     @media screen and (min-width: 768px) {
-      --x_gap: 3.82em;
-      --y_gap: 2.36em;
+      /* --x_gap: 3.82em; */
+      --y_gap: 1.618em;
 
       & > li {
         flex: 0 0 calc(50% - (var(--x_gap) / 2));
-      }
-    }
+        display: grid;
+        grid-template-areas: "icon title"
+                             /* ".    tags" */
+                             ".    description"
+                             ".    toolbar";
 
-    @media screen and (min-width: 992px) {
-      --x_gap: 6.18em;
+        grid-template-columns: 3.82em 1fr;
+        grid-template-rows: repeat(3, auto);
+        align-content: start;
+
+        column-gap: 1em;
+
+        & > .icon {
+          grid-area: icon;
+        }
+
+        & > h3 {
+          grid-area: title;
+          align-self: center;
+          margin: 0 0 .382em;
+          font-size: var(--fontSize_larger);
+          line-height: 1.236;
+          font-weight: 600;
+          color: var(--grey_3);
+        }
+
+        /* & > .tags {
+          grid-area: tags;
+          margin-block-end: .382em;
+        } */
+
+        & > .description {
+          grid-area: description;
+          font-size: var(--fontSize_small);
+          color: #777;
+
+          @media screen and (min-width: 768px) {
+            font-size: .9em;
+          }
+
+          @media screen and (min-width: 992px) {
+            font-size: var(--fontSize);
+          }
+        }
+
+        & > .toolbar {
+          grid-area: toolbar;
+        }
+      }
     }
   }
 }

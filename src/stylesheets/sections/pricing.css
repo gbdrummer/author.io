@@ -42,7 +42,7 @@ main > section.pricing {
         &:is(p) {
           margin-block-start: .382em;
           font-size: .9em;
-          color: var(--grey_1);
+          color: var(--grey_2);
         }
       }
     }

@@ -1,0 +1,21 @@
+main > * {
+  --max_width: var(--mobile_upperBound);
+
+  display: grid;
+  column-gap: var(--column_gap);
+  row-gap: 3.82em;
+  padding: 3.82em calc((100vw - var(--max_width)) / 2);
+
+  @media screen and (min-width: 992px) {
+    --max_width: 992px;
+    padding-block: 5em;
+  }
+
+  @media screen and (min-width: 1200px) {
+    --max_width: 1200px;
+  }
+
+  @media screen and (min-width: 1400px) {
+    --max_width: 1320px;
+  }
+}

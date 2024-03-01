@@ -9,14 +9,17 @@
 @import url("components/form.css") layer(components);
 @import url("components/form-controls.css") layer(components);
 @import url("components/overlay.css") layer(components);
+@import url("components/tag.css") layer(components);
 
-@import url("header.css") layer(custom);
-@import url("section.css") layer(custom);
+@import url("main.css");
+@import url("header.css");
+@import url("section.css");
+@import url("footer.css");
 
-@import url("sections/hero.css") layer(custom);
-@import url("sections/features.css") layer(custom);
-@import url("sections/notifications_automation.css") layer(custom);
-@import url("sections/pricing.css") layer(custom);
+@import url("sections/hero.css");
+@import url("sections/features.css");
+@import url("sections/notifications_automation.css");
+@import url("sections/pricing.css");
 
 :root {
   color-scheme: only light;

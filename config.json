@@ -3,7 +3,6 @@
   "dist": "../dist",
 
   "entries": [
-    "index.js",
-    "./slides/**/*.js"
+    "index.js"
   ]
 }

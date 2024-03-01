@@ -72,7 +72,7 @@ main > section.hero {
     & > .toolbar {
       display: flex;
       flex-direction: column;
-      gap: .382em;
+      gap: .618em;
 
       @media screen and (max-width: 767px) {
         flex-direction: row;
@@ -86,8 +86,8 @@ main > section.hero {
 
         & > .logos {
           display: flex;
+          align-items: center;
           gap: .618em;
-          margin-block-end: .382em;
   
           & > svg {
             width: var(--icon_width);
